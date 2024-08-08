@@ -1,0 +1,54 @@
+.container {
+  width: 950px;
+
+  color: rgb(17, 1, 1);
+  display: inline-flex;
+  position: relative;
+}
+
+.cut-out {
+  background-color: rgb(46, 45, 45);
+  height: fit-content;
+  margin-top: 12%;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 45%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #151514;
+}
+
+.description {
+  width: fit-content;
+  height: fit-content;
+  color: rgb(254, 252, 252);
+  background-color: rgb(46, 45, 45);
+  margin-top: 12.6%;
+  margin-right: 10%;
+  padding-top: 5%;
+  padding-left: 6%;
+  padding-right: 1%;
+  margin-left: 0.9%;
+}
+
+.info {
+  color: blue;
+  border-left: 3px solid blue;
+}
+
+.warn {
+  border-left: 3px solid yellow;
+  color: yellowgreen;
+}
+
+.error {
+  color: red;
+  border-left: 3px solid red;
+}

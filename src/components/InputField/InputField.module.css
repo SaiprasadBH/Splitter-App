@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  font-family: "Space Mono", monospace;
+  color: #5d6b6c;
+  width: 32.75rem;
+}
+
+.inputSubContainer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background-color: #f3f8fb;
+  border: 2px solid transparent;
+  border-radius: 2px;
+}
+
+.inputSubContainer:focus-within:not(.error) {
+  border-color: #65afa5;
+}
+
+.inputSubContainer.error {
+  border-color: rgb(197, 147, 128);
+}
+
+.inputSubContainer .icon {
+  background-color: #f3f8fb;
+  padding: 8px 20px;
+}
+
+.numberInput {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.5;
+  padding: 8px 20px;
+  width: 100%;
+  background-color: #f3f8fb;
+  font-family: "Space Mono", monospace;
+  text-align: end;
+  border: none;
+}
+
+.numberInput:focus {
+  outline: none;
+}
+
+.numberInputLabel {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.errorMessage {
+  min-height: 1.5rem;
+  color: rgb(197, 147, 128);
+  text-align: end;
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+@media (max-width: 1500px) {
+  /* Laptop */
+  .inputContainer {
+    max-width: 28rem;
+  }
+
+  .numberInput {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  /* Tablets */
+  .inputContainer {
+    max-width: 24rem;
+  }
+
+  .numberInput {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 550px) {
+  /* Phones */
+  .inputContainer {
+    width: 19.375rem;
+    max-width: 100%;
+    padding: 0.5rem;
+  }
+
+  .numberInput {
+    font-size: 1.2rem;
+  }
+
+  .inputSubContainer .icon {
+    padding: 8px 10px;
+  }
+
+  .numberInputLabel {
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,129 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+:root {
+  background-color: #c5e4e7;
+}
+.App {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.splitter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+
+  color: #00474b;
+  margin: 2% 0%;
+  letter-spacing: 47%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  padding: 25px;
+
+  background-color: white;
+  border-radius: 20px;
+}
+
+.select-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  margin-right: 60px;
+  width: 100%;
+  max-width: 490px;
+}
+
+.resetDiv {
+  width: 100%;
+  max-width: 490pxpx;
+}
+
+.tipErrorContainer {
+  min-height: 1.5rem;
+  color: rgb(197, 147, 128);
+  text-align: end;
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+@media (max-width: 1500px) {
+}
+
+@media (max-width: 1100px) {
+}
+
+@media (max-width: 550px) {
+}
+
+@media (min-width: 550px) and (max-width: 1100px) {
+}
+
+@media (min-width: 1100px) and (max-width: 1500px) {
+  /* Laptop */
+}

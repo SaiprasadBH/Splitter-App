@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+.tipSelector {
+  background-color: #fff;
+  font-family: "Space Mono", monospace;
+  margin-bottom: 20px;
+  display: grid;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-width: 448px;
+}
+
+.label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+  display: block;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.button {
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: #00474b;
+  color: white;
+  border: none;
+  line-height: 2.9618rem;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.button:active,
+.button:focus {
+  background-color: #26c2ad;
+}
+
+.button:hover {
+  background-color: #26c2ad;
+}
+
+.button:nth-child(6) {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.customInput {
+  background-color: #f3f8fb;
+  color: #5d6b6c;
+  text-align: end;
+  width: 100%;
+  border-radius: 6px;
+  border: transparent;
+  cursor: pointer;
+  line-height: 2.3rem;
+  font-size: 1.5rem;
+  outline: none;
+  font-weight: 700;
+  letter-spacing: 10%;
+}
+
+.customInput::placeholder {
+  text-align: center;
+}
+.customInput:focus::placeholder {
+  color: transparent;
+  text-align: right;
+}
+
+input:focus {
+  border: 2px solid #65afa5;
+}
+
+@media (max-width: 1500px) {
+  /* Laptop */
+  .tipSelector {
+    max-width: 400px;
+  }
+  .label {
+    font-size: 1.4rem;
+  }
+  .button {
+    font-size: 1.8rem;
+  }
+  .customInput {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  /* Tablets */
+  .tipSelector {
+    max-width: 350px;
+  }
+  .label {
+    font-size: 1.3rem;
+  }
+  .buttons {
+    grid-template-columns: 1fr 1fr;
+  }
+  .button {
+    font-size: 1.6rem;
+  }
+  .customInput {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 550px) {
+  /* Phones */
+  .tipSelector {
+    max-width: 300px;
+  }
+  .label {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+  }
+  .buttons {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .button {
+    font-size: 1.5rem;
+  }
+  .customInput {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 550px) and (max-width: 1100px) {
+  /* Tablets */
+  .tipSelector {
+    max-width: 400px;
+  }
+  .label {
+    font-size: 1.3rem;
+  }
+  .buttons {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .button {
+    font-size: 1.6rem;
+  }
+  .customInput {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 1500px) {
+  /* Laptop */
+  .tipSelector {
+    max-width: 450px;
+  }
+  .label {
+    font-size: 1.4rem;
+  }
+  .buttons {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .button {
+    font-size: 1.8rem;
+  }
+  .customInput {
+    font-size: 1.4rem;
+  }
+}

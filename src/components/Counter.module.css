@@ -1,0 +1,52 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30vw;
+  height: 30vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px;
+  background-color: black;
+  padding: 10px;
+  color: white;
+}
+
+.total {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.counter {
+  margin: 10px;
+  display: flex;
+  color: black;
+  flex-direction: column;
+  background-color: orange;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 3px;
+}
+
+.counter h2 {
+  margin-bottom: 10px;
+}
+
+button {
+  font-size: 16px;
+  margin: 5px;
+  padding: 5px;
+  background-color: gold;
+  color: black;
+  border: none;
+  border-radius: 3px;
+}
+
+button:hover {
+  background-color: greenyellow;
+}
