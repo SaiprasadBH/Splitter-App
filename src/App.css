@@ -74,10 +74,9 @@ input[type="number"] {
   align-items: center;
   font-size: 30px;
   font-weight: bold;
-
   color: #00474b;
   margin: 2% 0%;
-  letter-spacing: 47%;
+  letter-spacing: 0.8rem;
 }
 
 .container {

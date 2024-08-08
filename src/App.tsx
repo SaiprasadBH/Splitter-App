@@ -91,8 +91,8 @@ function App() {
   return (
     <div className="App">
       <div className="splitter">
-        <p className="first-part">SPLI</p>
-        <p className="second-part">TTER</p>
+        <span>SPLI</span>
+        <span>TTER</span>
       </div>
       <div className="container">
         <div className="select-container">
