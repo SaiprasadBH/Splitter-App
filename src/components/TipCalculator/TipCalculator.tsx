@@ -28,8 +28,8 @@ export function TipCalculator({
   return (
     <div className={styles.parentDiv}>
       <div className={styles.BillRowDiv}>
-        <BillRow label1="Tip Amount" label2="person" price={tipAmount} />
-        <BillRow label1="Total" label2="person" price={totalAmount} />
+        <BillRow label="Tip Amount" value={tipAmount} />
+        <BillRow label="Total" value={totalAmount} />
       </div>
       <div className="buttonDiv">
         <button

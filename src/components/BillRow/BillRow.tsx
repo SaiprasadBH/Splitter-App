@@ -1,23 +1,23 @@
 import styles from "./BillRow.module.css";
+
 export interface BillRowProps {
-  /**
-   * This is to pass the label
-   */
-  label1: string;
-  label2: string;
-  price: string;
+  label: string;
+  value: number | string;
 }
-export function BillRow(props: BillRowProps) {
+
+const BillRow = ({ label, value }: BillRowProps) => {
+  const formattedValue = typeof value === "string" ? value : value.toFixed(2);
+
   return (
-    <div className={styles.priceDiv}>
-      <div className={styles.tipAmount}>
-        <p>
-          {props.label1}/<br></br>
-          {props.label2}
-        </p>
+    <div className={styles.container}>
+      <div className={styles.label}>
+        <span>{label}</span>
+        <br />
+        <span>{"/ person"}</span>
       </div>
-      <div className={styles.price}>$ {props.price}</div>
+      <span className={styles.amount}>${formattedValue}</span>
     </div>
   );
-}
+};
+
 export default BillRow;

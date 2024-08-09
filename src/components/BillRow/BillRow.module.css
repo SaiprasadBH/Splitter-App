@@ -1,83 +1,41 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-.priceDiv {
-  display: grid;
-  align-items: center;
-  margin-bottom: 64px;
-  grid-template-columns: 1fr auto;
-  font-family: "Space Mono", monospace;
-  padding: 0 16px;
-}
-/* Mobile (0-550px) */
-@media (max-width: 550px) {
-  .priceDiv {
-    grid-template-columns: 1fr; /* Single column layout for mobile */
-    margin-bottom: 32px; /* Adjust margin for mobile */
-  }
-  .price {
-    font-size: 32px; /* Smaller font size for mobile */
-    line-height: 3rem; /* Adjust line height for mobile */
-  }
-  .tipAmount {
-    font-size: 16px; /* Smaller font size for mobile */
-    line-height: 1.2rem; /* Adjust line height for mobile */
-  }
-}
-/* Tablet (550-1100px) */
-@media (min-width: 551px) and (max-width: 1100px) {
-  .priceDiv {
-    grid-template-columns: 1fr auto; /* Two-column layout for tablets */
-    margin-bottom: 48px; /* Adjust margin for tablets */
-  }
-  .price {
-    font-size: 40px; /* Slightly smaller font size for tablets */
-    line-height: 4rem; /* Adjust line height for tablets */
-  }
-  .tipAmount {
-    font-size: 18px; /* Slightly smaller font size for tablets */
-    line-height: 1.5rem; /* Adjust line height for tablets */
-  }
-}
-/* Laptop (1100-1500px) */
-@media (min-width: 1101px) and (max-width: 1500px) {
-  .priceDiv {
-    grid-template-columns: 1fr auto; /* Two-column layout for laptops */
-    margin-bottom: 56px; /* Adjust margin for laptops */
-  }
-  .price {
-    font-size: 44px; /* Font size for laptops */
-    line-height: 4.2rem; /* Adjust line height for laptops */
-  }
-  .tipAmount {
-    font-size: 20px; /* Font size for laptops */
-    line-height: 1.7rem; /* Adjust line height for laptops */
-  }
-}
-/* Desktop (1500px and above) */
-@media (min-width: 1501px) {
-  .priceDiv {
-    grid-template-columns: 1fr auto; /* Two-column layout for desktops */
-    margin-bottom: 64px; /* Margin for desktops */
-  }
-  .price {
-    font-size: 48px; /* Font size for desktops */
-    line-height: 4.4rem; /* Line height for desktops */
-  }
-  .tipAmount {
-    font-size: 20px; /* Font size for desktops */
-    line-height: 1.7rem; /* Line height for desktops */
-  }
-}
-.price {
-  justify-self: end;
-  color: #2cc0ad;
+.container {
+  display: flex;
+  justify-content: space-between;
   font-weight: 700;
+  color: #2cc0ad;
+  margin-bottom: 64px;
+  width: 100%;
 }
-.tipAmount {
-  justify-self: start;
-  color: #feffff;
-  font-weight: 400;
+
+.label {
+  font-size: 1.5rem;
+  text-align: left;
 }
-p {
-  color: #9fb3b2;
-  font-weight: 400;
+
+.amount {
+  font-size: 2rem;
+}
+
+@media (max-width: 1100px) {
+  .container {
+    margin-bottom: 32px;
+  }
+
+  .label {
+    font-size: 1rem;
+  }
+
+  .amount {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .label {
+    font-size: 1rem;
+  }
+
+  .amount {
+    font-size: 1.5rem;
+  }
 }

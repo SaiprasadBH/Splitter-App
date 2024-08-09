@@ -1,35 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
-}
 .parentDiv {
   background-color: #00474b;
   color: #feffff;
   border-radius: 16px;
   padding: 30px;
-  width: 566px;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
-  height: 100%;
   font-family: "Space Mono", monospace;
+  flex-grow: 1;
 }
+
 .BillRowDiv {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  width: 100%;
 }
+
 .buttonDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .resetButton {
@@ -43,9 +39,68 @@ input[type="number"] {
   width: 100%;
   line-height: 2.3rem;
   text-align: center;
-  padding: 13px 185px;
+  padding: 13px 0;
 }
 
 .disableReset {
   background-color: #0d686d;
+}
+
+@media (max-width: 1500px) {
+  /* Laptop */
+  .parentDiv {
+    padding: 25px;
+  }
+
+  .resetButton {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  /* Tablets */
+  .parentDiv {
+    padding: 20px;
+  }
+
+  .resetButton {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 550px) {
+  /* Phones */
+  .parentDiv {
+    padding: 15px;
+  }
+
+  .BillRowDiv {
+    flex-direction: column;
+  }
+
+  .resetButton {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 550px) {
+  /* Tablets */
+  .parentDiv {
+    padding: 20px;
+  }
+
+  .resetButton {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  /* Laptop */
+  .parentDiv {
+    padding: 25px;
+  }
+
+  .resetButton {
+    font-size: 1.3rem;
+  }
 }

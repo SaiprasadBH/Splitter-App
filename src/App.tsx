@@ -115,7 +115,7 @@ function App() {
             errorMessage={personError}
           />
         </div>
-        <div className="resetDiv">
+        <div className="tip-calculator">
           <TipCalculator
             onReset={onReset}
             tipAmount={tipAmount.toFixed(2)}
