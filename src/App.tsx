@@ -5,22 +5,22 @@ import TipSelector from "./components/TipSelector";
 import TipCalculator from "./components/TipCalculator";
 
 interface State {
-  amountValue: number;
-  personValue: number;
+  amountValue: string;
+  personValue: string;
   selectedTip: number | null;
   tipError: string;
 }
 
 type Action =
-  | { type: "SET_AMOUNT"; payload: number }
-  | { type: "SET_PERSON"; payload: number }
+  | { type: "SET_AMOUNT"; payload: string }
+  | { type: "SET_PERSON"; payload: string }
   | { type: "SET_TIP"; payload: number }
   | { type: "SET_TIP_ERROR"; payload: string }
   | { type: "RESET" };
 
 const initialState: State = {
-  amountValue: 0,
-  personValue: 1,
+  amountValue: "",
+  personValue: "",
   selectedTip: null,
   tipError: "",
 };
@@ -44,32 +44,37 @@ function reducer(state: State, action: Action): State {
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
-
   const { amountValue, personValue, selectedTip, tipError } = state;
 
-  const amountError = amountValue <= 0 ? "Value must be greater than zero" : "";
-  const personError =
-    personValue < 1 ? "There must be at least one person" : "";
+  // Convert values to numbers only if they're not empty
+  const amount = Number(amountValue) || 0;
+  const person = Number(personValue) || 0;
 
+  // Error messages
+  const amountError =
+    amountValue && amount <= 0 ? "Value must be greater than zero" : "";
+  const personError =
+    personValue && person < 1 ? "There must be at least one person" : "";
+
+  // Calculations
   const tipAmount =
-    selectedTip !== null && personValue > 0
-      ? (amountValue * selectedTip) / 100 / personValue
+    selectedTip !== null && person > 0
+      ? (amount * selectedTip) / 100 / person
       : 0;
 
-  const totalAmount =
-    personValue > 0 ? (amountValue + tipAmount * personValue) / personValue : 0;
+  const totalAmount = person > 0 ? (amount + tipAmount * person) / person : 0;
 
   const handleAmountInput = (event: React.ChangeEvent<HTMLInputElement>) => {
     dispatch({
       type: "SET_AMOUNT",
-      payload: Number(event.target.value),
+      payload: event.target.value,
     });
   };
 
   const handlePersonInput = (event: React.ChangeEvent<HTMLInputElement>) => {
     dispatch({
       type: "SET_PERSON",
-      payload: Number(event.target.value),
+      payload: event.target.value,
     });
   };
 
@@ -81,7 +86,7 @@ function App() {
       });
       return;
     }
-    dispatch({ type: "SET_TIP", payload: Number(tip) });
+    dispatch({ type: "SET_TIP", payload: tip });
   };
 
   const onReset = () => {
@@ -103,7 +108,7 @@ function App() {
             onChange={handleAmountInput}
             errorMessage={amountError}
           />
-          <div>
+          <div className="tipSelector">
             <TipSelector onSelectTip={onSelectTip} />
             <p className="tipErrorContainer">{tipError ? tipError : ""}</p>
           </div>
