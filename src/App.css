@@ -94,12 +94,13 @@ body {
 }
 
 /* Tablets */
-@media (max-width: 1100px) {
+@media (min-width: 570px) and (max-width: 1100px) {
   .container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     padding: 20px;
     gap: 15px;
   }
+
   .splitter {
     min-height: 2.5rem;
   }
