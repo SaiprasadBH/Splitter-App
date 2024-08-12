@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./InputField.module.css";
+import "../../global.css";
+import "../../variables.css";
 
 export interface InputFieldProps extends React.ComponentProps<"input"> {
   /**

@@ -3,6 +3,8 @@ import InputField from "./components/InputField/InputField";
 import "./App.css";
 import TipSelector from "./components/TipSelector";
 import TipCalculator from "./components/TipCalculator";
+import "./global.css";
+import "./variables.css";
 
 interface State {
   amountValue: string;

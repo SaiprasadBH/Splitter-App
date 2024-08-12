@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import styles from "./TipSelector.module.css";
+import "../../global.css";
+import "../../variables.css";
 
 export interface TipSelectorProps {
   onSelectTip: (tip: number) => void;

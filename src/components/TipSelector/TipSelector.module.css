@@ -1,15 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-
 .tipSelector {
   background-color: #fff;
-  font-family: "Space Mono", monospace;
+  font-family: var(--font-family);
   display: grid;
-  padding-top: 20px;
+  padding-top: var(--spacing-medium);
   max-width: 448px;
 }
 
 .label {
-  font-size: 1.5rem;
+  font-size: var(--font-size-large);
   font-weight: bold;
   margin-bottom: 24px;
   display: block;
@@ -18,28 +16,28 @@
 .buttons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
+  gap: var(--spacing-small);
 }
 
 .button {
   font-size: 2rem;
   font-weight: 700;
-  background-color: #00474b;
+  background-color: var(--secondary-color);
   color: white;
   border: none;
   line-height: 2.9618rem;
   border-radius: 6px;
   cursor: pointer;
-  padding: 10px;
+  padding: var(--spacing-small);
 }
 
 .button:active,
 .button:focus {
-  background-color: #26c2ad;
+  background-color: var(--accent-color);
 }
 
 .button:hover {
-  background-color: #26c2ad;
+  background-color: var(--accent-color);
 }
 
 .button:nth-child(6) {
@@ -56,7 +54,7 @@
   border: transparent;
   cursor: pointer;
   line-height: 2.3rem;
-  font-size: 1.5rem;
+  font-size: var(--font-size-large);
   outline: none;
   font-weight: 700;
   letter-spacing: 10%;

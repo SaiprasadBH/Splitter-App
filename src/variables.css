@@ -1,0 +1,24 @@
+:root {
+  /* Colors */
+  --primary-color: #2cc0ad;
+  --secondary-color: #00474b;
+  --accent-color: #26c2ad;
+  --background-color: #fff;
+  --text-color: #feffff;
+  --input-background-color: #f3f8fb;
+  --input-text-color: #5d6b6c;
+
+  /* Font */
+  --font-family: "Space Mono", monospace;
+
+  /* Font Sizes */
+  --font-size-small: 1rem;
+  --font-size-medium: 1.25rem;
+  --font-size-large: 1.5rem;
+  --font-size-xlarge: 3rem;
+
+  /* Spacing */
+  --spacing-small: 10px;
+  --spacing-medium: 20px;
+  --spacing-large: 30px;
+}

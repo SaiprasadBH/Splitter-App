@@ -1,7 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-
 .parentDiv {
-  background-color: #00474b;
+  background-color: var(--secondary-color);
   color: #feffff;
   border-radius: 16px;
   padding: 30px;
@@ -11,7 +9,7 @@
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
-  font-family: "Space Mono", monospace;
+  font-family: var(--font-family);
   flex-grow: 1;
 }
 
@@ -29,9 +27,9 @@
 }
 
 .resetButton {
-  font-size: 1.5rem;
+  font-size: var(--font-size-medium);
   letter-spacing: 10%;
-  color: #00474b;
+  color: var(--secondary-color);
   font-weight: 700;
   background-color: #2cc0ae;
   border-radius: 7px;

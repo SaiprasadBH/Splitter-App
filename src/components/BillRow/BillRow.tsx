@@ -1,4 +1,6 @@
 import styles from "./BillRow.module.css";
+import "../../variables.css";
+import "../../global.css";
 
 export interface BillRowProps {
   label: string;

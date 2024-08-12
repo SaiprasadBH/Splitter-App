@@ -1,6 +1,8 @@
 import styles from "./TipCalculator.module.css";
 import BillRow from "../BillRow";
 import { useEffect, useState } from "react";
+import "../../global.css";
+import "../../variables.css";
 
 export interface TipCalculatorProp {
   tipAmount: string;
