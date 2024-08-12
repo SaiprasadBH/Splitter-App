@@ -49,22 +49,27 @@ function App() {
   const { amountValue, personValue, selectedTip, tipError } = state;
 
   // Convert values to numbers only if they're not empty
-  const amount = Number(amountValue) || 0;
-  const person = Number(personValue) || 0;
+  const amount = Number(amountValue) || "";
+  const person = Number(personValue) || "";
 
   // Error messages
   const amountError =
-    amountValue && amount <= 0 ? "Value must be greater than zero" : "";
+    amountValue && Number(amount) <= 0 ? "Value must be greater than zero" : "";
   const personError =
-    personValue && person < 1 ? "There must be at least one person" : "";
+    personValue && Number(person) < 1
+      ? "There must be at least one person"
+      : "";
 
   // Calculations
   const tipAmount =
-    selectedTip !== null && person > 0
-      ? (amount * selectedTip) / 100 / person
-      : 0;
+    selectedTip !== null && Number(person) > 0
+      ? (Number(amount) * selectedTip) / 100 / Number(person)
+      : "--";
 
-  const totalAmount = person > 0 ? (amount + tipAmount * person) / person : 0;
+  const totalAmount =
+    Number(person) > 0
+      ? (Number(amount) + Number(tipAmount) * Number(person)) / Number(person)
+      : "--";
 
   const handleAmountInput = (event: React.ChangeEvent<HTMLInputElement>) => {
     dispatch({
@@ -125,8 +130,8 @@ function App() {
         <div className="tip-calculator">
           <TipCalculator
             onReset={onReset}
-            tipAmount={tipAmount.toFixed(2)}
-            totalAmount={totalAmount.toFixed(2)}
+            tipAmount={tipAmount.toString()}
+            totalAmount={totalAmount.toString()}
           />
         </div>
       </div>
