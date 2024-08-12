@@ -108,6 +108,7 @@ input[type="number"] {
 }
 
 .tipSelector {
+  margin-bottom: 20px;
 }
 
 .tipErrorContainer {
