@@ -68,7 +68,8 @@ body {
   .container {
     grid-template-columns: 1fr;
     gap: 10px;
-    padding: 0;
+    padding: var(--spacing-medium);
+    width: 100%;
   }
 
   .splitter {
