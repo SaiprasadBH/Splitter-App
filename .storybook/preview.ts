@@ -1,4 +1,5 @@
 import type { Preview } from "@storybook/react";
+import "../src/styles/tailwind.css";
 import {
   INITIAL_VIEWPORTS,
   MINIMAL_VIEWPORTS,

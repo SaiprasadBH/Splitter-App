@@ -4,7 +4,7 @@ import "./App.css";
 import TipSelector from "./components/TipSelector";
 import TipCalculator from "./components/TipCalculator";
 import "./global.css";
-import "./variables.css";
+// import "./variables.css";
 
 interface State {
   amountValue: string;
@@ -101,13 +101,13 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <div className="splitter">
+    <div className="flex flex-col items-center justify-center w-full bg-[#c5e4e7]">
+      <div className="tracking-[0.47rem] text-center flex flex-col justify-center items-center text-2xl font-bold text-[#00474b] my-5 ">
         <span>SPLI</span>
         <span>TTER</span>
       </div>
-      <div className="container">
-        <div className="select-container">
+      <div className="grid grid-cols-1 tablet:grid-cols-2 gap-4 tablet:gap-5 w-full max-w-5xl p-6 bg-white rounded-xl box-border">
+        <div className="flex flex-col items-center w-full">
           <InputField
             value={amountValue}
             typeofIcon="dollar"
@@ -115,9 +115,12 @@ function App() {
             onChange={handleAmountInput}
             errorMessage={amountError}
           />
-          <div className="tipSelector">
+          <div className="h-5"></div>
+          <div className="w-full max-w-xl mb-5">
             <TipSelector onSelectTip={onSelectTip} />
-            <p className="tipErrorContainer">{tipError ? tipError : ""}</p>
+            <p className="min-h-[2.75rem] text-[rgb(197,147,128)] text-[0.7rem] lg:text-[1rem] laptop:text-[1rem] tablet:text-[1rem] text-right tablet:text-center mt-1 pb-5 leading-[1.5] sm:text-[]">
+              {tipError ? tipError : ""}
+            </p>
           </div>
           <InputField
             value={personValue}
@@ -127,10 +130,10 @@ function App() {
             errorMessage={personError}
           />
         </div>
-        <div className="tip-calculator">
+        <div className="w-full">
           <TipCalculator
             onReset={onReset}
-            tipAmount={tipAmount.toString()}
+            tipAmount={`${tipAmount.toString()}`}
             totalAmount={totalAmount.toString()}
           />
         </div>

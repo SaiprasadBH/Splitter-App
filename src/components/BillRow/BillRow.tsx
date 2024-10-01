@@ -1,6 +1,4 @@
-import styles from "./BillRow.module.css";
-import "../../variables.css";
-import "../../global.css";
+import React from "react";
 
 export interface BillRowProps {
   label: string;
@@ -11,13 +9,15 @@ const BillRow = ({ label, value }: BillRowProps) => {
   const formattedValue = typeof value === "string" ? value : value.toFixed(2);
 
   return (
-    <div className={styles.container}>
-      <div className={styles.label}>
+    <div className="flex justify-between font-bold text-[#2cc0ad] mb-8 w-full tablet:mb-16">
+      <div className="font-normal text-left text-[#feffff] font-[Space Mono] text-[1rem] tablet:text-[1.25rem]">
         <span>{label}</span>
         <br />
         <span>{"/ person"}</span>
       </div>
-      <span className={styles.amount}>${formattedValue}</span>
+      <span className="font-bold text-right font-[Space Mono] text-[1.5rem] tablet:text-[3rem]">
+        ${formattedValue}
+      </span>
     </div>
   );
 };

@@ -1,20 +1,10 @@
 import React from "react";
-import styles from "./InputField.module.css";
 import "../../global.css";
 import "../../variables.css";
 
 export interface InputFieldProps extends React.ComponentProps<"input"> {
-  /**
-   * Input label
-   */
   label: string;
-  /**
-   * Icon type
-   */
   typeofIcon: "person" | "dollar";
-  /**
-   * error message
-   */
   errorMessage: string;
 }
 
@@ -28,7 +18,7 @@ export function InputField({
     switch (typeofIcon) {
       case "person":
         return (
-          <div className={styles.svgContainer}>
+          <div className="bg-[#f3f8fb] px-5 py-2.5 phone:px-2.5">
             <svg
               width="26"
               height="29"
@@ -37,8 +27,8 @@ export function InputField({
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M12.9965 12.9391C14.0074 12.9391 14.9768 12.4939 15.6916 11.7013C16.4064 10.9088 16.8079 9.83387 16.8079 8.71304C16.8079 7.59221 16.4064 6.51729 15.6916 5.72475C14.9768 4.9322 14.0074 4.48695 12.9965 4.48695C11.9857 4.48695 11.0162 4.9322 10.3015 5.72475C9.58669 6.51729 9.18514 7.59221 9.18514 8.71304C9.18514 9.83387 9.58669 10.9088 10.3015 11.7013C11.0162 12.4939 11.9857 12.9391 12.9965 12.9391ZM4.10327 25.6174C4.10327 24.3224 4.3333 23.0402 4.78023 21.8438C5.22716 20.6474 5.88223 19.5604 6.70805 18.6447C7.53386 17.729 8.51425 17.0027 9.59323 16.5071C10.6722 16.0116 11.8287 15.7565 12.9965 15.7565C14.1644 15.7565 15.3209 16.0116 16.3998 16.5071C17.4788 17.0027 18.4592 17.729 19.285 18.6447C20.1108 19.5604 20.7659 20.6474 21.2128 21.8438C21.6598 23.0402 21.8898 24.3224 21.8898 25.6174H4.10327Z"
                 fill="#9FB3B2"
               />
@@ -47,7 +37,7 @@ export function InputField({
         );
       case "dollar":
         return (
-          <div className={styles.svgContainer}>
+          <div className="bg-[#f3f8fb] px-5 py-2.5 phone:px-2.5">
             <svg
               width="14"
               height="21"
@@ -68,19 +58,31 @@ export function InputField({
   };
 
   return (
-    <div className={styles.inputContainer}>
-      <label htmlFor={styles.numberInput} className={styles.numberInputLabel}>
+    <div className="flex flex-col text-[#5d6b6c] w-full max-w-[32.75rem] p-[4px] phone:p-2">
+      <label
+        htmlFor="numberInput"
+        className="font-bold mb-5 lg:text-[1.4rem] laptop:text-[1.4rem]"
+      >
         {label}
       </label>
+
       <div
-        className={`${styles.inputSubContainer} ${
-          errorMessage ? styles.error : ""
+        className={`flex w-full items-center bg-[#f3f8fb] border-2 rounded-sm ${
+          errorMessage
+            ? "border-[#c59380]"
+            : "border-transparent focus-within:border-[#65afa5]"
         }`}
       >
         {getIcon()}
-        <input type="number" className={styles.numberInput} {...inputProps} />
+        <input
+          type="number"
+          className="text-right bg-[#f3f8fb] border-none outline-none font-bold leading-6 px-5 py-2.5 w-full lg:text-[1.8rem] laptop:text-[1.8rem] tablet:text-[1.8rem] phone:text-[1.2rem]"
+          {...inputProps}
+        />
       </div>
-      <p className={styles.errorMessage}>{errorMessage ? errorMessage : ""}</p>
+      <p className="min-h-[1.5rem] text-[0.7rem] lg:text-[1rem] laptop:text-[1rem] tablet:text-[1rem] text-[#c59380] text-right mt-1.0 leading-6">
+        {errorMessage || ""}
+      </p>
     </div>
   );
 }

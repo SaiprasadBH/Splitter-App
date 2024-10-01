@@ -1,6 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/src/assets/fonts/SpaceMono-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Space Mono";
+  font-style: italic;
+  font-weight: 400;
+  src: url("/src/assets/fonts/SpaceMono-Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/src/assets/fonts/SpaceMono-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Space Mono";
+  font-style: italic;
+  font-weight: 700;
+  src: url("/src/assets/fonts/SpaceMono-BoldItalic.ttf") format("truetype");
+}
 :root,
 body,
-html {
+html,
+#root {
+  font-family: "Space Mono";
   display: flex;
   justify-content: center;
   align-items: center;
